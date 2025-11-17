@@ -9,7 +9,6 @@ import CoreAdvising from './pages/CoreAdvising'
 import CourseScheduling from './pages/CourseScheduling'
 import CareerAdvising from './pages/CareerAdvising'
 import Auth from './pages/Auth'
-import Dashboard from './pages/Dashboard'
 import './index.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
@@ -23,7 +22,6 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <Route path="/career-advising" element={<CareerAdvising />} />
         <Route path="/login" element={<Auth />} />
         <Route path="/signup" element={<Auth />} />
-        <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/test" element={<Test />} />
       </Routes>
     </BrowserRouter>

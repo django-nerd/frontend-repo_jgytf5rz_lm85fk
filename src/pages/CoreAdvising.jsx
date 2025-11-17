@@ -1,6 +1,7 @@
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import { motion } from 'framer-motion'
+import { ProgressBars, StatCard, PieChart } from '../components/Charts'
 
 export default function CoreAdvising(){
   return (
@@ -24,7 +25,7 @@ export default function CoreAdvising(){
             <h3 className="font-medium">Recommendation cards</h3>
             <div className="mt-3 grid gap-3">
               {["Take Algorithms II","Join Data Club","Apply for TA"].map((t,i) => (
-                <div key={i} className="rounded-lg border border-black/10 p-3">
+                <div key={i} className="rounded-lg border border-black/10 p-3 bg-gradient-to-r from-indigo-50 to-white">
                   <div className="font-medium">{t}</div>
                   <div className="text-xs text-neutral-600">Based on your progress</div>
                 </div>
@@ -47,6 +48,13 @@ export default function CoreAdvising(){
               ))}
             </div>
           </motion.div>
+        </div>
+
+        <div className="mt-8 grid md:grid-cols-4 gap-4">
+          <StatCard label="Credits completed" value="84 / 132" delta="+15 this year" color="green" />
+          <StatCard label="Core courses done" value="12 / 20" delta="+2" color="blue" />
+          <StatCard label="Electives" value="4 / 8" delta="—" color="amber" />
+          <PieChart segments={[50,30,20]} colors={["#002E6D","#00C8FF","#E9E2D0"]} label="Focus areas" />
         </div>
       </div>
       <Footer />

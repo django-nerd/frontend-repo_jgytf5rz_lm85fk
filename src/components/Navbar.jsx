@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Link, NavLink } from 'react-router-dom'
-import { Menu, X, Sparkles, LayoutGrid, CalendarDays, GraduationCap, Briefcase, LogIn, UserPlus, Home } from 'lucide-react'
+import { Menu, X, LayoutGrid, CalendarDays, GraduationCap, Briefcase, Home } from 'lucide-react'
 
 const navItems = [
   { to: '/', label: 'Home', icon: Home },
@@ -8,7 +8,6 @@ const navItems = [
   { to: '/core-advising', label: 'Core Advising', icon: GraduationCap },
   { to: '/course-scheduling', label: 'Course Scheduling', icon: CalendarDays },
   { to: '/career-advising', label: 'Career Advising', icon: Briefcase },
-  { to: '/dashboard', label: 'Dashboard', icon: Sparkles },
 ]
 
 export default function Navbar() {
